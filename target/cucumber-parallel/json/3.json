@@ -1,0 +1,116 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-04T09:05:08.841Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.StepdefinitionTest.beforescenario(Scenario) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Scenario 1 Open url in Amazon Third Feature",
+        "description": "",
+        "id": "test-case-execution-in-amazon;scenario-1-open-url-in-amazon-third-feature",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 41922000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "i open the url \"https://www.amazon.in/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.amazon.in/\"",
+                  "offset": 15
+                }
+              ],
+              "location": "stepDefinitions.StepdefinitionTest.i_open_the_url(String) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ThirdFeature"
+          },
+          {
+            "name": "@smoketest"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-04T09:05:50.924Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.StepdefinitionTest.beforescenario(Scenario) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Scenario 2 Open url in Amazon Third Feature",
+        "description": "",
+        "id": "test-case-execution-in-amazon;scenario-2-open-url-in-amazon-third-feature",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 23946000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "i open the url \"https://www.amazon.in/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.amazon.in/\"",
+                  "offset": 15
+                }
+              ],
+              "location": "stepDefinitions.StepdefinitionTest.i_open_the_url(String) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ThirdFeature"
+          },
+          {
+            "name": "@smoketest"
+          }
+        ]
+      }
+    ],
+    "name": "Test case Execution in Amazon",
+    "description": "",
+    "id": "test-case-execution-in-amazon",
+    "keyword": "Feature",
+    "uri": "file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/src/test/resources/features/Second/Feature3.feature",
+    "tags": [
+      {
+        "name": "@ThirdFeature",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

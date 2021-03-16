@@ -1,0 +1,116 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-04T09:05:08.971Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.StepdefinitionTest.beforescenario(Scenario) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Scenario 1 Open url in Paytm Second Feature",
+        "description": "",
+        "id": "test-case-execution-in-paytm;scenario-1-open-url-in-paytm-second-feature",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 41437000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "i open the url \"https://www.paytm.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.paytm.com/\"",
+                  "offset": 15
+                }
+              ],
+              "location": "stepDefinitions.StepdefinitionTest.i_open_the_url(String) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SecondFeature"
+          },
+          {
+            "name": "@smoketest"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-04T09:05:50.518Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.StepdefinitionTest.beforescenario(Scenario) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Scenario 2 Open url in Paytm Second Feature",
+        "description": "",
+        "id": "test-case-execution-in-paytm;scenario-2-open-url-in-paytm-second-feature",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 26230000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "i open the url \"https://www.paytm.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.paytm.com/\"",
+                  "offset": 15
+                }
+              ],
+              "location": "stepDefinitions.StepdefinitionTest.i_open_the_url(String) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SecondFeature"
+          },
+          {
+            "name": "@smoketest"
+          }
+        ]
+      }
+    ],
+    "name": "Test case Execution in Paytm",
+    "description": "",
+    "id": "test-case-execution-in-paytm",
+    "keyword": "Feature",
+    "uri": "file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/src/test/resources/features/First/Feature2.feature",
+    "tags": [
+      {
+        "name": "@SecondFeature",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

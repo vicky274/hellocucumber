@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>hellocucumber</groupId>
+	<artifactId>hellocucumber</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<properties>
+		<cucumber.version>5.0.0-RC1</cucumber.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source> 
+        <maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+
+
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.vimalselvam</groupId>
+			<artifactId>cucumber-extentsreport</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+
+	
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.0.9</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			
+			<!-- this will auto generate runner class and then using surefire it can be executed parallelly -->
+			
+			<!-- <plugin>
+				<groupId>com.github.temyers</groupId>
+				<artifactId>cucumber-jvm-parallel-plugin</artifactId>
+				<version>5.0.0</version>
+				<executions>
+					<execution>
+						<id>generateRunners</id>
+						<phase>generate-test-sources</phase>
+						<goals>
+							<goal>generateRunners</goal>
+						</goals>
+						<configuration>
+							<glue>
+								<package>stepDefinitions</package>
+							</glue>
+							<outputDirectory>src/test/java/autoGenerateRunners</outputDirectory> runner will generate here
+							<featuresDirectory>src\test\resources\features</featuresDirectory>Cucumber 
+								feature file location
+							<cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>Cucumber 
+								default reporting path
+							<plugins>
+								<plugin>
+									The available options are junit, testng, html, pretty, json, 
+										usage and rerun
+									<name>json</name>
+									<extension>json</extension>
+									Optional output directory. Overrides cucumberOutputDirectory. 
+										Usefull when different plugins create files with the same extension
+									<outputDirectory>${project.build.directory}/cucumber-parallel/json/</outputDirectory>
+								</plugin>
+							</plugins>
+							<monochrome>true</monochrome>
+							<useTestNG>false</useTestNG>
+							The naming scheme to use for the generated test classes. One 
+								of ['simple', 'feature-title', 'pattern']
+							<namingScheme>simple</namingScheme>
+							The class naming pattern to use. Only required/used if naming 
+								scheme is 'pattern'.
+							<namingPattern>Parallel{c}IT</namingPattern>
+							One of [SCENARIO, FEATURE]. SCENARIO generates one runner per 
+								scenario. FEATURE generates a runner per feature.
+							<parallelScheme>FEATURE</parallelScheme>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin> -->
+		
+		<!-- Each class will run separate fork and scenarios will run in sequence in that fork -->
+		
+<!-- When there is a single runner it is ideal to use the “methods” setting. 
+If multiple runners are present then one can use either “classesAndMethods” or “methods”.  The “classes” 
+setting does not give any benefit for a single runner, as it uses one thread it is similar to a sequential execution. -->
+
+ <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-surefire-plugin</artifactId>
+	<version>2.21.0</version>
+	<configuration>
+		<forkCount>4</forkCount>
+		<reuseForks>true</reuseForks>
+		<includes>
+			<include>**/Parallel*IT.class</include>
+		</includes>
+	</configuration>
+</plugin> 
+
+<!-- not working for parallel execution -->
+<!--  <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+						</goals>
+						<configuration>
+
+							UNCOMMENT - To add any exclusions if required
+							<excludes> <exclude>**/*IT*.java</exclude> </excludes>
+
+							<includes>
+
+								UNCOMMENT BELOW LINE - To execute feature files with a single 
+									runner 
+									
+								<include>**/Default.java</include>
+
+								UNCOMMENT BELOW LINE - To execute feature files with multiple 
+									runners
+								<include>**/*Runner.java</include>
+							</includes>
+
+							UNCOMMENT BELOW 3 LINES - To execute using parallel or combination 
+								option
+						<parallel>methods</parallel>
+							<threadCount>2</threadCount>
+							<perCoreThreadCount>true</perCoreThreadCount>
+
+							UNCOMMENT BELOW 3 LINES - To execute using forking or combination 
+								option
+							<forkCount>2</forkCount>
+							<reuseForks>true</reuseForks>
+							<reportsDirectory>${project.build.directory}/failsafe-reports_${surefire.forkNumber}</reportsDirectory>
+
+						</configuration>
+					</execution>
+				</executions>
+			</plugin> -->
+			
+<!-- 			
+ <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.0</version>
+				
+				<configuration>
+				<includes>
+				<include>**/*Default.java</include>
+				</includes>
+				
+				not working
+				<parallel>methods</parallel>
+							<threadCount>2</threadCount>
+							<perCoreThreadCount>true</perCoreThreadCount>
+				</configuration>
+				
+			</plugin>
+
+ -->
+		</plugins>
+	</build>
+
+</project>

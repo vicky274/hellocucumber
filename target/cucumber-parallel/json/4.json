@@ -1,0 +1,117 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-04T09:05:09.002Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.StepdefinitionTest.beforescenario(Scenario) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Scenario 1 Open url in Amazon Fourth feature",
+        "description": "",
+        "id": "test-case-execution-in-amazon;scenario-1-open-url-in-amazon-fourth-feature",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 29530000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "i open the url \"https://www.amazon.in/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.amazon.in/\"",
+                  "offset": 15
+                }
+              ],
+              "location": "stepDefinitions.StepdefinitionTest.i_open_the_url(String) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FourthFeature"
+          },
+          {
+            "name": "@smoketest"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-04T09:05:38.656Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.StepdefinitionTest.beforescenario(Scenario) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Scenario 2 Open url in Amazon Fourth feature",
+        "description": "",
+        "id": "test-case-execution-in-amazon;scenario-2-open-url-in-amazon-fourth-feature",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 36157000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "i open the url \"https://www.amazon.in/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.amazon.in/\"",
+                  "offset": 15
+                }
+              ],
+              "location": "stepDefinitions.StepdefinitionTest.i_open_the_url(String) in file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/target/test-classes/"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FourthFeature"
+          },
+          {
+            "name": "@smoketest"
+          }
+        ]
+      }
+    ],
+    "name": "Test case Execution in Amazon",
+    "description": "",
+    "id": "test-case-execution-in-amazon",
+    "keyword": "Feature",
+    "uri": "file:/C:/SeleniumWorkspace/cucumber-scenarios-parallel/cucumber-scenarios-parallel-example-master/src/test/resources/features/Second/Feature4.feature",
+    "tags": [
+      {
+        "name": "@FourthFeature",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
